@@ -1,0 +1,33 @@
+#
+# Reverse-proxy snippet for cloudcli-plugin-dap-trigger.
+#
+# Routes `/dap/*` to the plugin (which listens on 127.0.0.1:3020) and the rest
+# to CloudCLI itself (assumed on 127.0.0.1:3001 — change to whatever yours
+# uses, see `cloudcli --port`).
+#
+# Caddy auto-provisions Let's Encrypt for the hostname. Make sure your DNS
+# A record points to the host BEFORE Caddy first starts on this config.
+#
+
+{
+    email you@example.com
+}
+
+cloudcli.example.com {
+    encode zstd gzip
+
+    # /dap/trigger + /dap/health + the api.rpc proxy path that CloudCLI
+    # exposes for the plugin frontend are NOT both under /dap — only /dap/*
+    # belongs to the plugin's externally-exposed webhook. The api.rpc proxy
+    # path (/api/plugins/dap-trigger/rpc/*) is served by CloudCLI itself.
+    handle /dap/* {
+        reverse_proxy 127.0.0.1:3020
+    }
+
+    handle {
+        reverse_proxy 127.0.0.1:3001 {
+            # CloudCLI uses websockets + SSE; keep upstream streaming usable.
+            flush_interval -1
+        }
+    }
+}

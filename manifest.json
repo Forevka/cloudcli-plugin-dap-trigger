@@ -1,0 +1,13 @@
+{
+  "name": "dap-trigger",
+  "displayName": "DAP Triggers",
+  "version": "1.0.0",
+  "description": "Receive HMAC-signed webhooks from DAP, spawn `claude -p` in the target repo, callback DAP with the result. Shows trigger history in a tab.",
+  "author": "Bohdan Forevka",
+  "icon": "icon.svg",
+  "type": "module",
+  "slot": "tab",
+  "entry": "dist/index.js",
+  "server": "dist/server.js",
+  "permissions": []
+}

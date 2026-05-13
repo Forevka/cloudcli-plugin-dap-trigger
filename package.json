@@ -1,0 +1,37 @@
+{
+  "name": "cloudcli-plugin-dap-trigger",
+  "version": "1.0.0",
+  "description": "CloudCLI plugin: HMAC-authenticated webhook receiver that runs `claude -p` in a target repo and POSTs the result back to a caller-supplied callback URL. Built for agent-to-agent integration (DAP / n8n / GitHub Actions / any HTTP caller).",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "author": "Bohdan Forevka",
+  "homepage": "https://github.com/forevka/cloudcli-plugin-dap-trigger#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/forevka/cloudcli-plugin-dap-trigger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/forevka/cloudcli-plugin-dap-trigger/issues"
+  },
+  "keywords": [
+    "cloudcli",
+    "cloudcli-plugin",
+    "claude-code",
+    "webhook",
+    "agent-to-agent",
+    "a2a",
+    "hmac"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "@types/node": "^20.0.0"
+  }
+}

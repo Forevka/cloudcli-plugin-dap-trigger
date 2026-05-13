@@ -1,0 +1,16 @@
+# build output
+dist/
+*.tsbuildinfo
+
+# runtime / secrets — must never be committed
+.secret
+.history.json
+
+# deps
+node_modules/
+
+# editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
