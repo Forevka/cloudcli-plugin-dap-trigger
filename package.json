@@ -6,13 +6,13 @@
   "type": "module",
   "license": "MIT",
   "author": "Bohdan Forevka",
-  "homepage": "https://github.com/forevka/cloudcli-plugin-dap-trigger#readme",
+  "homepage": "https://github.com/Forevka/cloudcli-plugin-dap-trigger#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/forevka/cloudcli-plugin-dap-trigger.git"
+    "url": "https://github.com/Forevka/cloudcli-plugin-dap-trigger.git"
   },
   "bugs": {
-    "url": "https://github.com/forevka/cloudcli-plugin-dap-trigger/issues"
+    "url": "https://github.com/Forevka/cloudcli-plugin-dap-trigger/issues"
   },
   "keywords": [
     "cloudcli",

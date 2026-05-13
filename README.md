@@ -36,13 +36,13 @@ The plugin adds:
 
 CloudCLI supports installing plugins from a git URL. In the CloudCLI UI:
 
-> Settings → Plugins → Add plugin from git → `https://github.com/<your-fork>/cloudcli-plugin-dap-trigger`
+> Settings → Plugins → Add plugin from git → `https://github.com/Forevka/cloudcli-plugin-dap-trigger`
 
 Or manually:
 
 ```bash
 cd ~/.claude-code-ui/plugins
-git clone https://github.com/<your-fork>/cloudcli-plugin-dap-trigger.git dap-trigger
+git clone https://github.com/Forevka/cloudcli-plugin-dap-trigger.git dap-trigger
 cd dap-trigger
 npm install
 npm run build
@@ -230,7 +230,7 @@ Single Node 18+ HTTP server, no native deps, no framework. ~330 lines of TypeScr
 ## Build from source
 
 ```bash
-git clone https://github.com/<your-fork>/cloudcli-plugin-dap-trigger.git
+git clone https://github.com/Forevka/cloudcli-plugin-dap-trigger.git
 cd cloudcli-plugin-dap-trigger
 npm install
 npm run build
